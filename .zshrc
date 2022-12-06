@@ -116,6 +116,7 @@ export PATH
 
 alias Q1="cd ~/UCL/Master2/Q1"
 alias thesis="cd ~/UCL/Master2/Thesis"
+alias AOC="cd ~/Documents/AdventOfCode"
 
 . $HOME/.asdf/asdf.sh
 
