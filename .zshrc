@@ -115,11 +115,18 @@ path+=('/home/michel/bin')
 export PATH
 
 alias Q1="cd ~/UCL/Master2/Q1"
+alias Q2="cd ~/UCL/Master2/Q2"
 alias thesis="cd ~/UCL/Master2/Thesis"
 alias AOC="cd ~/Documents/AdventOfCode"
+alias pmod_uwb="cd ~/UCL/Master2/Thesis/pmod_uwb && nvim ."
 
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+export CNG_PATH="/home/michel/UCL/Master2/Q2/LINFO2146/contiki-ng"
+alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -e LOCAL_UID=$(id -u $USER) -e LOCAL_GID=$(id -g $USER) -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
+
+

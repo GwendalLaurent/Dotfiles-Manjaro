@@ -9,7 +9,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'erlangls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -47,6 +47,10 @@ cmp.setup {
     end, { 'i', 's' }),
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
+vim.keymap.set("n", "<C-&>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<C-é>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<C-\">", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<C-\'>", function() ui.nav_file(4) end)
         cmp.select_prev_item()
       elseif luasnip.jumpable(-1) then
         luasnip.jump(-1)
