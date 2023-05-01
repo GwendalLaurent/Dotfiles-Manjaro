@@ -136,6 +136,11 @@ _G.packer_plugins = {
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/michel/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["zen-mode.nvim"] = {
     config = { "\27LJ\2\nŽ\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\2B\0\2\1K\0\1\0\vwindow\foptions\1\0\3\vheight\3\1\nwidth\3¤\3\rbackdrop\4æÌ™³\6æÌ¹ÿ\3\1\0\1\vzindex\3(\nsetup\rzen-mode\frequire\0" },
     loaded = true,
@@ -149,14 +154,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for harpoon]], true)
 try_loadstring("\27LJ\2\nÀ\2\0\0\b\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\4\0=\4\5\0035\4\v\0005\5\t\0005\6\a\0005\a\6\0=\a\b\6=\6\n\5=\5\f\4=\4\r\3=\3\15\2B\0\2\1K\0\1\0\20global_settings\1\0\0\rprojects&$HOME/UCL/Master2/thesis/pmod_uwb\1\0\0\tterm\1\0\0\tcmds\1\0\0\1\2\0\0\r./mcd.sh\23excluded_filetypes\1\2\0\0\fharpoon\1\0\5\27tmux_autoclose_windows\1\21enter_on_sendcmd\1\19save_on_change\2\19save_on_toggle\1\16mark_branch\1\nsetup\fharpoon\frequire\0", "config", "harpoon")
 time([[Config for harpoon]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n}\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\nsigns\1\0\0\vchange\1\0\1\ttext\6~\badd\1\0\0\1\0\1\ttext\6+\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: zen-mode.nvim
 time([[Config for zen-mode.nvim]], true)
 try_loadstring("\27LJ\2\nŽ\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\2B\0\2\1K\0\1\0\vwindow\foptions\1\0\3\vheight\3\1\nwidth\3¤\3\rbackdrop\4æÌ™³\6æÌ¹ÿ\3\1\0\1\vzindex\3(\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
 time([[Config for zen-mode.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n}\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\nsigns\1\0\0\vchange\1\0\1\ttext\6~\badd\1\0\0\1\0\1\ttext\6+\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

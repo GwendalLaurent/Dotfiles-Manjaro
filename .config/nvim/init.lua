@@ -64,3 +64,8 @@ vim.keymap.set("n", "<C-\'>", function() ui.nav_file(4) end)
     { name = 'luasnip' },
   },
 }
+
+-- Setup elixir LSP
+lspconfig.elixirls.setup{
+    cmd = {"/home/michel.elixir-ls/language_server.sh"}
+}
