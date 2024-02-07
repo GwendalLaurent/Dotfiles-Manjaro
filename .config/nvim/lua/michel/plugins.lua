@@ -11,12 +11,13 @@ return require('packer').startup(function(use)
             require("zen-mode").setup {
                 zindex = 40,
                 window = {
-                    backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+                    backdrop = 0.95 , -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
                     -- height and width can be:
                     -- * an absolute number of cells when > 1
                     -- * a percentage of the width / height of the editor when <= 1
                     -- * a function that returns the width or the height
                     width = 420, -- width of the Zen window
+                    -- width = 420, -- width of the Zen window
                     height = 1, -- height of the Zen window
                     -- by default, no options are changed for the Zen window
                     -- uncomment any of the options below, or add other vim.wo options you want to apply
@@ -88,5 +89,40 @@ return require('packer').startup(function(use)
     }
     use 'nvim-telescope/telescope.nvim'
     use 'tpope/vim-fugitive'
+    use {
+          "folke/todo-comments.nvim",
+          dependencies = { "nvim-lua/plenary.nvim" },
+          opts = {
+          }
+    }
+    use {
+        "nvim-neorg/neorg",
+        config = function()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.completion"] = {
+                        config = {
+                            engine = "nvim-cmp",
+                        }
+                    },
+                    ["core.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                work = "~/Notes/work",
+                                perso = "~/Notes/perso",
+                            },
+                            default_workspace = "work",
+                        },
+                    },
+                },
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
+    use "nvim-treesitter/nvim-treesitter"
+    use "lervag/vimtex"
 end)
 

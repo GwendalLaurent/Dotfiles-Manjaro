@@ -17,6 +17,12 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Make erlangls find the first config file possible (avoid starting the server in the current folder (might create issue if no erlang_ls.config file)
+lspconfig.erlangls.setup({
+    root_dir = lspconfig.util.root_pattern("erlang_ls.*"), -- Allows .config and yaml files
+    capabilities = capabilities
+})
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 
@@ -68,4 +74,4 @@ vim.keymap.set("n", "<C-\'>", function() ui.nav_file(4) end)
 -- Setup elixir LSP
 lspconfig.elixirls.setup{
     cmd = {"/home/michel.elixir-ls/language_server.sh"}
-}
+} 

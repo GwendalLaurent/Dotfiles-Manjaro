@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/michel/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/michel/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/michel/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/michel/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/michel/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/michel/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?.lua;/home/michel/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?/init.lua;/home/michel/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?.lua;/home/michel/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/michel/.cache/nvim/packer_hererocks/2.1.1694285958/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -96,10 +96,16 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
-    config = { "\27LJ\2\n¿\2\0\0\b\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\4\0=\4\5\0035\4\v\0005\5\t\0005\6\a\0005\a\6\0=\a\b\6=\6\n\5=\5\f\4=\4\r\3=\3\15\2B\0\2\1K\0\1\0\20global_settings\1\0\0\rprojects&$HOME/UCL/Master2/thesis/pmod_uwb\1\0\0\tterm\1\0\0\tcmds\1\0\0\1\2\0\0\r./mcd.sh\23excluded_filetypes\1\2\0\0\fharpoon\1\0\5\27tmux_autoclose_windows\1\21enter_on_sendcmd\1\19save_on_change\2\19save_on_toggle\1\16mark_branch\1\nsetup\fharpoon\frequire\0" },
+    config = { "\27LJ\2\n¿\2\0\0\b\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\4\0=\4\5\0035\4\v\0005\5\t\0005\6\a\0005\a\6\0=\a\b\6=\6\n\5=\5\f\4=\4\r\3=\3\15\2B\0\2\1K\0\1\0\20global_settings\1\0\0\rprojects&$HOME/UCL/Master2/thesis/pmod_uwb\1\0\0\tterm\1\0\0\tcmds\1\0\0\1\2\0\0\r./mcd.sh\23excluded_filetypes\1\2\0\0\fharpoon\1\0\5\16mark_branch\1\27tmux_autoclose_windows\1\21enter_on_sendcmd\1\19save_on_change\2\19save_on_toggle\1\nsetup\fharpoon\frequire\0" },
     loaded = true,
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  neorg = {
+    config = { "\27LJ\2\n©\2\0\0\a\0\17\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\15\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\r\0005\5\v\0005\6\n\0=\6\f\5=\5\b\4=\4\14\3=\3\16\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\1\22default_workspace\twork\1\0\2\twork\17~/Notes/work\nperso\18~/Notes/perso\20core.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
+    loaded = true,
+    path = "/home/michel/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -110,6 +116,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/michel/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -126,6 +137,11 @@ _G.packer_plugins = {
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/michel/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -141,8 +157,13 @@ _G.packer_plugins = {
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  vimtex = {
+    loaded = true,
+    path = "/home/michel/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
   ["zen-mode.nvim"] = {
-    config = { "\27LJ\2\né\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\2B\0\2\1K\0\1\0\vwindow\foptions\1\0\3\vheight\3\1\nwidth\3§\3\rbackdrop\4ÊÃô≥\6ÊÃπˇ\3\1\0\1\vzindex\3(\nsetup\rzen-mode\frequire\0" },
+    config = { "\27LJ\2\nç\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\2B\0\2\1K\0\1\0\vwindow\foptions\1\0\3\rbackdrop\4ÊÃô≥\6ÊÃπˇ\3\vheight\3\1\nwidth\3x\1\0\1\vzindex\3(\nsetup\rzen-mode\frequire\0" },
     loaded = true,
     path = "/home/michel/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
     url = "https://github.com/folke/zen-mode.nvim"
@@ -150,14 +171,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-try_loadstring("\27LJ\2\n¿\2\0\0\b\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\4\0=\4\5\0035\4\v\0005\5\t\0005\6\a\0005\a\6\0=\a\b\6=\6\n\5=\5\f\4=\4\r\3=\3\15\2B\0\2\1K\0\1\0\20global_settings\1\0\0\rprojects&$HOME/UCL/Master2/thesis/pmod_uwb\1\0\0\tterm\1\0\0\tcmds\1\0\0\1\2\0\0\r./mcd.sh\23excluded_filetypes\1\2\0\0\fharpoon\1\0\5\27tmux_autoclose_windows\1\21enter_on_sendcmd\1\19save_on_change\2\19save_on_toggle\1\16mark_branch\1\nsetup\fharpoon\frequire\0", "config", "harpoon")
-time([[Config for harpoon]], false)
 -- Config for: zen-mode.nvim
 time([[Config for zen-mode.nvim]], true)
-try_loadstring("\27LJ\2\né\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\2B\0\2\1K\0\1\0\vwindow\foptions\1\0\3\vheight\3\1\nwidth\3§\3\rbackdrop\4ÊÃô≥\6ÊÃπˇ\3\1\0\1\vzindex\3(\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
+try_loadstring("\27LJ\2\nç\1\0\0\5\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\3=\3\6\2B\0\2\1K\0\1\0\vwindow\foptions\1\0\3\rbackdrop\4ÊÃô≥\6ÊÃπˇ\3\vheight\3\1\nwidth\3x\1\0\1\vzindex\3(\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
 time([[Config for zen-mode.nvim]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n©\2\0\0\a\0\17\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\15\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\r\0005\5\v\0005\6\n\0=\6\f\5=\5\b\4=\4\14\3=\3\16\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\1\22default_workspace\twork\1\0\2\twork\17~/Notes/work\nperso\18~/Notes/perso\20core.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+try_loadstring("\27LJ\2\n¿\2\0\0\b\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\4\0=\4\5\0035\4\v\0005\5\t\0005\6\a\0005\a\6\0=\a\b\6=\6\n\5=\5\f\4=\4\r\3=\3\15\2B\0\2\1K\0\1\0\20global_settings\1\0\0\rprojects&$HOME/UCL/Master2/thesis/pmod_uwb\1\0\0\tterm\1\0\0\tcmds\1\0\0\1\2\0\0\r./mcd.sh\23excluded_filetypes\1\2\0\0\fharpoon\1\0\5\16mark_branch\1\27tmux_autoclose_windows\1\21enter_on_sendcmd\1\19save_on_change\2\19save_on_toggle\1\nsetup\fharpoon\frequire\0", "config", "harpoon")
+time([[Config for harpoon]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n}\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\nsigns\1\0\0\vchange\1\0\1\ttext\6~\badd\1\0\0\1\0\1\ttext\6+\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
