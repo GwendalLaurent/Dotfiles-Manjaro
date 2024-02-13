@@ -95,6 +95,7 @@ return require('packer').startup(function(use)
     }
     use "nvim-treesitter/nvim-treesitter"
     use "lervag/vimtex"
+    -- markdown preview plugin
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
