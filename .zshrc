@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="apple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,8 +72,8 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	zsh-autosuggestions
-    	zsh-syntax-highlighting
+	# zsh-autosuggestions
+    # zsh-syntax-highlighting
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -114,19 +114,16 @@ export KERL_BUILD_DOCS=yes
 path+=('/home/michel/bin')
 export PATH
 
-alias Q1="cd ~/UCL/Master2/Q1"
-alias Q2="cd ~/UCL/Master2/Q2"
-alias thesis="cd ~/UCL/Master2/Thesis"
 alias AOC="cd ~/Documents/AdventOfCode"
-alias pmod_uwb="cd ~/UCL/Master2/Thesis/pmod_uwb && nvim ."
-
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
+alias UWB="cd ~/Stritzinger/pmod_uwb && nvim ."
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 export CNG_PATH="/home/michel/UCL/Master2/Q2/LINFO2146/contiki-ng"
 alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -e LOCAL_UID=$(id -u $USER) -e LOCAL_GID=$(id -g $USER) -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
 
+. $HOME/.asdf/asdf.sh
 
+. $HOME/.asdf/completions/asdf.bash
+
+ export PATH=/Users/gwendal/.cache/rebar3/bin:$PATH
